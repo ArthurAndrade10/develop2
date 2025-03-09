@@ -8,17 +8,17 @@ Nessa atividade, você deverá montar a página inicial do projeto escolhido, a 
 
 ## Informações Gerais
 
-- Nome:
-- Matricula:
-- Proposta de projeto escolhida:
-- Breve descrição sobre seu projeto:
+- Nome: Arthur Melo
+- Matricula: 879214
+- Proposta de projeto escolhida: Catalogo de filmes
+- Breve descrição sobre seu projeto: Optei por fazer uma pagina de filmes com os principais titulos de cada categoria, seguindo uma identidade visual parerida c0om a netflix
 
 
 ## Print do esboço criada
 
-<<  COLOQUE A IMAGEM AQUI >>
+<img src= "Captura de tela 2025-03-09 184506.png" alt= "print do esboço"
 
 
 ## Print da home-page criada
 
-<<  COLOQUE A IMAGEM AQUI >>
+<img src= "Captura de tela 2025-03-09 184519.png" alt= "print da homepage"
