@@ -8,8 +8,10 @@
 /* Estilo do corpo e texto */
 body {
     font-family: 'Arial', sans-serif;
-    background-color: #141414; 
+    background-color: #141414; /* Fundo escuro similar ao da Netflix */
     color: #fff;
+    padding: 0;
+    margin: 0;
 }
 
 /* Navbar */
@@ -17,19 +19,23 @@ header {
     position: fixed;
     top: 0;
     width: 100%;
-    background-color: rgba(0, 0, 0, 0.7); 
+    background-color: rgba(0, 0, 0, 0.7); /* Transparência para dar o efeito da Netflix */
     padding: 10px 0;
     z-index: 1000;
+    box-sizing: border-box;
 }
 
 header nav ul {
     list-style: none;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
+    margin: 0;
+    padding-left: 20px;
 }
 
 header nav ul li {
     margin: 0 20px;
+    padding: 0;
 }
 
 header nav ul li a {
@@ -39,18 +45,20 @@ header nav ul li a {
     font-size: 14px;
     text-transform: uppercase;
     letter-spacing: 1px;
+    padding: 10px;
 }
 
 header nav ul li a:hover {
-    color: #e50914; 
+    color: #e50914; /* Cor de destaque semelhante ao Netflix */
 }
 
 header nav ul li.logo a {
     font-size: 24px;
     font-weight: 700;
-    color: #fff;
-    text-transform: lowercase; 
+    color: #e50914; /* Logo em vermelho */
+    text-transform: lowercase;
     letter-spacing: 1px;
+    padding-left: 20px; /* Alinhando com a margem esquerda */
 }
 
 header nav ul li.search-container {
@@ -87,7 +95,7 @@ header nav ul li.search-container button:hover {
 
 /* Seção de Destaques */
 .destaques {
-    padding: 80px 20px 20px; 
+    padding: 80px 20px 20px;
     text-align: center;
     background-color: #141414;
 }
@@ -102,6 +110,8 @@ header nav ul li.search-container button:hover {
 /* Categoria */
 .categoria {
     margin-top: 30px;
+    padding: 20px;
+    position: relative;
 }
 
 .categoria h3 {
@@ -109,6 +119,7 @@ header nav ul li.search-container button:hover {
     font-weight: bold;
     text-transform: uppercase;
     margin-bottom: 15px;
+    position: relative;
 }
 
 /* Grid de filmes */
@@ -116,7 +127,8 @@ header nav ul li.search-container button:hover {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
     gap: 20px;
-    padding: 0 20px;
+    padding: 20px;
+    box-sizing: border-box;
 }
 
 .cartaz {
@@ -125,6 +137,11 @@ header nav ul li.search-container button:hover {
     border-radius: 8px;
     overflow: hidden;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 10px;
+    box-sizing: border-box;
 }
 
 .cartaz img {
@@ -135,24 +152,22 @@ header nav ul li.search-container button:hover {
 }
 
 .cartaz h3 {
-    position: absolute;
-    bottom: 10px;
-    left: 10px;
     color: #fff;
     font-size: 18px;
     font-weight: 600;
     text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+    margin-top: 10px;
 }
 
 .cartaz p {
-    display: none; 
+    display: none;
 }
 
 .cartaz a {
     position: absolute;
     bottom: 10px;
     right: 10px;
-    background-color: rgba(229, 9, 20, 0.7); 
+    background-color: rgba(229, 9, 20, 0.7);
     color: #fff;
     text-decoration: none;
     padding: 10px 20px;
@@ -170,61 +185,11 @@ header nav ul li.search-container button:hover {
     box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
 }
 
-/* Filtros */
-.filtros {
-    padding: 40px 20px;
-    background-color: #141414;
-    margin: 20px 0;
-}
-
-.filtros form {
-    display: flex;
-    justify-content: space-between;
-}
-
-.filtros label, .filtros select {
-    margin-right: 10px;
-    font-size: 14px;
-}
-
-.filtros select {
-    padding: 10px;
-    background-color: #333;
-    border: 1px solid #444;
-    color: #fff;
-    border-radius: 5px;
-}
-
-.filtros button {
-    padding: 10px 20px;
-    background-color: #e50914;
-    color: #fff;
-    border: none;
-    cursor: pointer;
-    border-radius: 5px;
-    font-size: 14px;
-}
-
-.filtros button:hover {
-    background-color: #f40612;
-}
-
 /* Ajuste para tornar o layout responsivo */
 @media (max-width: 768px) {
+}
     .grid-filmes {
         grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
     }
     
-    .cartaz h3 {
-        font-size: 16px;
-    }
-
-    .cartaz a {
-        font-size: 12px;
-        padding: 8px 15px;
-    }
-
-    header nav ul li.search-container input {
-        width: 150px;
-    }
-}
+    
